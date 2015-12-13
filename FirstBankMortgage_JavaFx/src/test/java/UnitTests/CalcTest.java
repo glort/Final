@@ -1,4 +1,4 @@
-package base;
+package UnitTests;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Student_Test {
+import ch.makery.address.view.MortgageController;
+
+public class CalcTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,9 +30,9 @@ public class Student_Test {
 
 	@Test
 	public void test() {
-		//FinalExam - Add some meaningful junit tests.
-		assertTrue(1==1);
-		StudentDAL.getStudents();
+		System.out.println(MortgageController.calcPayment(.04, 300000, 30));
+		assertTrue(MortgageController.calcPayment(.04, 300000, 30) == 1432.25);
+		
 	}
 
 }

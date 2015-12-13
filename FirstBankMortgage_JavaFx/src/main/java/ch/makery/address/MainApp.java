@@ -25,7 +25,7 @@ import javax.xml.bind.Unmarshaller;
 import base.RateDAL;
 import ch.makery.address.view.MortgageController;
 import ch.makery.address.view.RootLayoutController;
-import domain.RateDomainModel;
+
 
 public class MainApp extends Application {
 
@@ -88,7 +88,7 @@ public class MainApp extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
+            loader.setLocation(MainApp.class.getResource("view/Mortgage.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.

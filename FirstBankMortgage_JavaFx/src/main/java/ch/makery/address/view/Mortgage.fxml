@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="363.0" prefWidth="693.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MortgageController">
+<AnchorPane prefHeight="363.0" prefWidth="693.0"  xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MortgageController">
    <children>
-      <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" >
-               <children>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
+      <Label layoutX="42.0" layoutY="56.0" text="Income(annual)">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="89.0" text="Expenses(monthly)">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="127.0" text="Credit Score">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="161.0" text="House Cost">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="196.0" prefHeight="21.0" prefWidth="36.0" text="Term">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="234.0" text="Mortgage Payment(monthly)">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="TERM" layoutX="347.0" layoutY="194.0" prefWidth="150.0" />
+      <TextField fx:id="INCOME" layoutX="347.0" layoutY="54.0" />
+      <TextField fx:id="EXPENSES" layoutX="347.0" layoutY="87.0" />
+      <TextField fx:id="CREDITSCORE" layoutX="347.0" layoutY="125.0" />
+      <TextField fx:id="HOUSECOST" layoutX="347.0" layoutY="159.0" />
+      <Label fx:id="PAYMENT" layoutX="347.0" layoutY="236.0" />
+      <Button layoutX="432.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate" />
    </children>
 </AnchorPane>
