@@ -82,7 +82,7 @@ public class MortgageController {
     	if (creditScore < 600)
     		PAYMENT.setText("Credit Score Too Low");
     	
-    	else if (payment > .36*monthlyIncome||payment > .18*(monthlyIncome + monthlyExpenses)|| payment > (monthlyIncome - monthlyExpenses)){
+    	else if (payment > .36*monthlyIncome||payment > .28*(monthlyIncome + monthlyExpenses)|| payment > (monthlyIncome - monthlyExpenses)){
     		//Added stipulation that payment must be less than monthly income minus monthly expense.  It just makes sense.
     		PAYMENT.setText("House Cost Too High");
     	}
