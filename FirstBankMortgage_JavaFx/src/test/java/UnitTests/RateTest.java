@@ -49,7 +49,7 @@ public class RateTest {
     		System.out.println("Credit Score Too Low");
     		fail();
     	}
-    	else if (payment > 0.36*monthlyIncome||payment > 0.18*(monthlyIncome + monthlyExpenses)|| payment > (monthlyIncome - monthlyExpenses)){
+    	else if (payment > 0.36*monthlyIncome||payment > 0.28*(monthlyIncome + monthlyExpenses)|| payment > (monthlyIncome - monthlyExpenses)){
     		System.out.println("House Cost Too High");
     		fail();
     	}
